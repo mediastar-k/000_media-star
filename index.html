@@ -21,6 +21,7 @@
 <meta name="twitter:title" content="Media Star | Websites, die aus der Menge leuchten">
 <meta name="twitter:description" content="Webdesign, Entwicklung, Sichtbarkeit und Pflege.">
 <meta name="twitter:image" content="assets/og-image.jpg">
+<link rel="canonical" href="https://media-star-agency.de/">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -53,8 +54,7 @@
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Webdesign" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Webentwicklung" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Suchmaschinenoptimierung" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website-Pflege" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Impressum und Datenschutzerklärung" } }
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website-Pflege" } }
     ]
   }
 }
@@ -69,16 +69,17 @@
 
 <header class="bar" data-bar>
   <nav class="bar__inner" aria-label="Hauptnavigation">
-    <a class="brand" href="#top" aria-label="Media Star, zum Seitenanfang">
+    <a class="brand" href="index.html" aria-label="Media Star, zur Startseite">
       <svg class="brand__mark" aria-hidden="true"><use href="#mark"/></svg>
       <span class="brand__name">Media Star</span>
     </a>
     <ul class="bar__links">
-      <li><a href="#ueber-uns">Über uns</a></li>
-      <li><a href="#leistungen">Leistungen</a></li>
-      <li><a href="#kontakt">Kontakt</a></li>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a href="leistungen.html">Leistungen</a></li>
+      <li><a href="pakete.html">Pakete</a></li>
+      <li><a class="bar__cta" href="kontakt.html">Kontakt</a></li>
     </ul>
-    <a class="bar__cta" href="#kontakt">Anfrage senden</a>
   </nav>
 </header>
 
@@ -101,8 +102,8 @@
       <h1 class="hero__title" id="hero-title"><span class="line">Websites, die aus</span> <span class="line">der Menge leuchten.</span></h1>
       <p class="hero__lead">Media Star gestaltet und entwickelt Websites für Unternehmen, die gesehen werden wollen.</p>
       <div class="hero__actions">
-        <a class="btn" href="#kontakt">Projekt anfragen</a>
-        <a class="link-quiet" href="#leistungen">Was wir machen</a>
+        <a class="btn" href="kontakt.html">Projekt anfragen</a>
+        <a class="link-quiet" href="leistungen.html">Was wir machen</a>
       </div>
     </div>
     <button class="hero__toggle" type="button" data-video-toggle aria-pressed="false">
@@ -110,122 +111,16 @@
       <span class="hero__toggle-text">Video anhalten</span>
     </button>
   </section>
-
-  <section class="about" id="ueber-uns" aria-labelledby="about-title">
-    <div class="about__glint" data-depth="0.22" aria-hidden="true">
-      <svg><use href="#mark"/></svg>
-    </div>
-    <div class="container about__grid">
-      <h2 class="about__title" id="about-title" data-reveal>Media Star ist eine Webagentur. <span class="about__soft">Wir bündeln, was Ihr Unternehmen ausmacht, zu einer Website, die man versteht, bevor man scrollt.</span></h2>
-      <div class="about__cols">
-        <p data-reveal>Ein guter Auftritt beginnt nicht beim Layout, sondern bei der Frage, was Ihre Kundschaft zuerst wissen muss. Daraus entstehen Aufbau, Texte und Gestaltung.</p>
-        <p data-reveal>Gestaltung und Technik kommen bei uns aus einer Hand. So bleibt die Seite schnell, lesbar und auf dem Smartphone genauso klar wie am großen Bildschirm.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="services" id="leistungen" aria-labelledby="services-title">
-    <div class="container services__grid">
-      <div class="services__head">
-        <h2 class="services__title" id="services-title">Leistungen</h2>
-        <p class="services__lead">Vier Dinge braucht jede Website. Wir kümmern uns um alle vier.</p>
-      </div>
-      <ol class="services__list">
-        <li class="service" data-reveal>
-          <h3 class="service__name">Design und Entwicklung</h3>
-          <p class="service__text">Eine Gestaltung, die zu Ihrem Unternehmen passt, sauber programmiert: schnell geladen und klar auf jedem Bildschirm, vom Smartphone bis zum Monitor.</p>
-        </li>
-        <li class="service" data-reveal>
-          <h3 class="service__name">Sichtbarkeit</h3>
-          <p class="service__text">Suchmaschinenoptimierung von Anfang an: klare Struktur, passende Metadaten und Ladezeiten, die Google und Besucher mögen.</p>
-        </li>
-        <li class="service" data-reveal>
-          <h3 class="service__name">Pflege</h3>
-          <p class="service__text">Neue Inhalte, Anpassungen und technische Aktualisierungen, damit Ihre Website auch nach dem Start aktuell bleibt.</p>
-        </li>
-        <li class="service" data-reveal>
-          <h3 class="service__name">Impressum und Datenschutz</h3>
-          <p class="service__text">Impressum und Datenschutzerklärung gehören auf jede Website. Wir erstellen beide passend zu den Diensten, die Ihre Seite nutzt, und binden sie ein.</p>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="proof" id="gemessen" aria-labelledby="proof-title">
-    <div class="container proof__grid">
-      <div class="proof__head">
-        <h2 class="proof__title" id="proof-title">Diese Seite misst sich selbst.</h2>
-        <p class="proof__lead">Die Werte stammen aus Ihrem Browser, gemessen in dem Moment, in dem Sie diese Seite geöffnet haben.</p>
-      </div>
-      <dl class="proof__facts">
-        <div class="fact">
-          <dt>Bis die Seite lesbar war</dt>
-          <dd><span class="fact__value num" data-fact="ready">…</span><span class="fact__unit" data-fact-unit="ready"></span></dd>
-        </div>
-        <div class="fact">
-          <dt>Übertragene Daten ohne Video</dt>
-          <dd><span class="fact__value num" data-fact="weight">…</span><span class="fact__unit" data-fact-unit="weight"></span></dd>
-        </div>
-        <div class="fact">
-          <dt>Layout angepasst an Ihre Breite</dt>
-          <dd><span class="fact__value num" data-fact="width">…</span><span class="fact__unit" data-fact-unit="width"></span></dd>
-        </div>
-      </dl>
-      <noscript><p class="proof__note">Mit aktiviertem JavaScript erscheinen hier die gemessenen Werte.</p></noscript>
-    </div>
-  </section>
-
-  <section class="contact" id="kontakt" aria-labelledby="contact-title">
-    <div class="contact__light" data-depth="0.3" aria-hidden="true"></div>
-    <div class="container contact__inner">
-      <div class="contact__intro">
-        <h2 class="contact__title" id="contact-title" data-reveal>Erzählen Sie uns von Ihrem Projekt.</h2>
-        <p class="contact__lead" data-reveal>Schreiben Sie uns in ein paar Sätzen, was Sie vorhaben. Die Nachricht geht direkt an unser Postfach.</p>
-        <p class="contact__direct" data-reveal>
-          <a href="mailto:media.star@web.de?subject=Projektanfrage%20Website">media.star@web.de</a>
-        </p>
-      </div>
-      <form class="form" action="https://formsubmit.co/media.star@web.de" method="post" data-form data-reveal>
-        <input type="hidden" name="_subject" value="Neue Projektanfrage über die Website">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-        <div class="form__trap" aria-hidden="true">
-          <label for="f-honey">Nicht ausfüllen</label>
-          <input id="f-honey" type="text" name="_honey" tabindex="-1" autocomplete="off">
-        </div>
-        <div class="field">
-          <label for="f-name">Name</label>
-          <input id="f-name" name="name" type="text" autocomplete="name" required maxlength="120" aria-describedby="f-name-err">
-          <p class="field__error" id="f-name-err" data-error="Bitte geben Sie Ihren Namen an."></p>
-        </div>
-        <div class="field">
-          <label for="f-mail">E-Mail</label>
-          <input id="f-mail" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="160" aria-describedby="f-mail-err">
-          <p class="field__error" id="f-mail-err" data-error="Bitte geben Sie eine gültige E-Mail-Adresse an."></p>
-        </div>
-        <div class="field">
-          <label for="f-msg">Ihre Nachricht</label>
-          <textarea id="f-msg" name="message" rows="6" required minlength="10" maxlength="5000" aria-describedby="f-msg-err"></textarea>
-          <p class="field__error" id="f-msg-err" data-error="Bitte schreiben Sie uns ein paar Worte zu Ihrem Projekt."></p>
-        </div>
-        <button class="form__submit" type="submit">Nachricht senden</button>
-        <p class="form__status" role="status" aria-live="polite" data-form-status></p>
-        <p class="form__note">Ihre Angaben werden über den Dienst FormSubmit an media.star@web.de übermittelt und nur zur Beantwortung Ihrer Anfrage verwendet.</p>
-      </form>
-    </div>
-  </section>
 </main>
 
 <footer class="foot">
   <div class="container foot__inner">
-    <a class="brand brand--foot" href="#top" aria-label="Media Star, zum Seitenanfang">
+    <a class="brand brand--foot" href="index.html" aria-label="Media Star, zur Startseite">
       <svg class="brand__mark" aria-hidden="true"><use href="#mark"/></svg>
       <span class="brand__name">Media Star</span>
     </a>
     <ul class="foot__links" aria-label="Seitenbereiche">
-      <li><a href="#ueber-uns">Über uns</a></li>
-      <li><a href="#leistungen">Leistungen</a></li>
-      <li><a href="#kontakt">Kontakt</a></li>
+      <li><a href="messwerte.html">Messwerte</a></li>
     </ul>
     <address class="foot__contact">
       <a href="mailto:media.star@web.de">media.star@web.de</a>

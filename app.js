@@ -141,8 +141,11 @@
     const status = form.querySelector("[data-form-status]");
     const submit = form.querySelector("[type=submit]");
     const fields = [...form.querySelectorAll(".field")];
+    if (form.elements._timestamp) form.elements._timestamp.value = String(Date.now());
+    const pick = new URLSearchParams(location.search).get("paket");
+    if (pick && form.elements.praeferenz) form.elements.praeferenz.value = pick;
     const check = (field) => {
-      const input = field.querySelector("input, textarea");
+      const input = field.querySelector("input, textarea, select");
       const error = field.querySelector(".field__error");
       const ok = input.checkValidity();
       field.classList.toggle("is-invalid", !ok);
@@ -151,7 +154,7 @@
       return ok;
     };
     fields.forEach((field) => {
-      const input = field.querySelector("input, textarea");
+      const input = field.querySelector("input, textarea, select");
       input.addEventListener("blur", () => { if (input.value) check(field); });
       input.addEventListener("input", () => { if (field.classList.contains("is-invalid")) check(field); });
     });
@@ -160,20 +163,20 @@
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
       const invalid = fields.filter((f) => !check(f));
-      if (invalid.length) { invalid[0].querySelector("input, textarea").focus(); return; }
+      if (invalid.length) { invalid[0].querySelector("input, textarea, select").focus(); return; }
       const data = Object.fromEntries(new FormData(form));
-      if (data._honey) { form.reset(); say("Danke! Ihre Nachricht ist bei uns angekommen.", false); return; }
+      if (data._honeypot) { form.reset(); say("Danke! Ihre Nachricht ist bei uns angekommen.", false); return; }
       submit.disabled = true;
       submit.textContent = "Wird gesendet …";
       say("", false);
       try {
-        const res = await fetch(form.action.replace("formsubmit.co/", "formsubmit.co/ajax/"), {
+        const res = await fetch(form.action, {
           method: "POST",
           headers: { "Content-Type": "application/json", Accept: "application/json" },
           body: JSON.stringify(data),
         });
         const body = await res.json().catch(() => ({}));
-        if (!res.ok || String(body.success) !== "true") throw new Error();
+        if (!res.ok || body.ok === false) throw new Error();
         form.reset();
         say("Danke! Ihre Nachricht ist bei uns angekommen.", false);
       } catch {
